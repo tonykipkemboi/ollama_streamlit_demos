@@ -1,12 +1,12 @@
-# Ollama + Streamlit Demo App 🦙👨‍💻
+# 🚀 Ollama x Streamlit Playground
 
-This project demonstrates how to run models locally using Ollama and create an interactive UI with Streamlit.
+This project demonstrates how to run models locally using [Ollama](https://ollama.com/) and create an interactive UI with [Streamlit](https://streamlit.io).
+
+The app has a page for running chat-based models and also one for Llava model for vision.
 
 ## App in Action
 
-<Here's a placeholder for the GIF showing the app in action.>
-
-(🚧 GIF coming soon! 🚧)
+![GIF](assets/ollama_gh.gif)
 
 ## Features
 
@@ -19,11 +19,11 @@ This project demonstrates how to run models locally using Ollama and create an i
 Before running the app, ensure you have Python installed on your machine. Then, clone this repository and install the required packages using pip:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/tonykipkemboi/ollama_streamlit_demos.git
 ```
 
 ```bash
-cd <repository-name>
+cd ollama_streamlit_demos
 ```
 
 ```bash
@@ -40,11 +40,14 @@ streamlit run streamlit_app.py
 
 Navigate to the URL provided by Streamlit in your browser to interact with the app.
 
+**NB: Make sure you have downloaded [Ollama](https://ollama.com/) to your system and also have pulled a [model or models](https://ollama.com/library) you intend to use.**
+
 ## Contributing
 
-Interested in contributing to the Ollama + Streamlit Demo app?
+Interested in contributing to this app?
 
-- Great! I welcome contributions from everyone.
+- Great!
+- I welcome contributions from everyone.
 
 Got questions or suggestions?
 
@@ -52,4 +55,4 @@ Got questions or suggestions?
 
 ## Acknowledgments
 
-Kudos to the Ollama team for their efforts in making machine learning models more accessible!
+Kudos to the [Ollama](https://ollama.com/) team for their efforts in making machine learning models more accessible!
