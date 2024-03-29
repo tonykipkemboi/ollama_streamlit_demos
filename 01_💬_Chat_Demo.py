@@ -71,8 +71,7 @@ def main():
         #     with st.spinner("Pulling model"):
         #         ollama.pull(model)
 
-        st.page_link("https://ollama.com/library",
-                     label="Find models here", icon="🤖")
+        st.page_link("https://ollama.com/library", label="Find models here", icon="🤖")
         st.stop()
 
     message_container = st.container(height=500, border=True)
@@ -81,18 +80,17 @@ def main():
         st.session_state.messages = []
 
     for message in st.session_state.messages:
-        avatar = '🤖' if message["role"] == "assistant" else '😎'
+        avatar = "🤖" if message["role"] == "assistant" else "😎"
         with message_container.chat_message(message["role"], avatar=avatar):
             st.markdown(message["content"])
 
     if prompt := st.chat_input("Enter a prompt here..."):
         try:
-            st.session_state.messages.append(
-                {"role": "user", "content": prompt})
+            st.session_state.messages.append({"role": "user", "content": prompt})
 
-            message_container.chat_message("user", avatar='😎').markdown(prompt)
+            message_container.chat_message("user", avatar="😎").markdown(prompt)
 
-            with message_container.chat_message("assistant", avatar='🤖'):
+            with message_container.chat_message("assistant", avatar="🤖"):
                 with st.spinner("wait for it..."):
                     stream = client.chat.completions.create(
                         model=selected_model,
@@ -104,8 +102,7 @@ def main():
                     )
                 # stream response
                 response = st.write_stream(stream)
-            st.session_state.messages.append(
-                {"role": "assistant", "content": response})
+            st.session_state.messages.append({"role": "assistant", "content": response})
 
         except Exception as e:
             st.error(e, icon="⛔️")

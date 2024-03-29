@@ -65,8 +65,7 @@ def main():
         with container1:
             if uploaded_file is not None:
                 st.session_state.uploaded_file_state = uploaded_file.getvalue()
-                image = Image.open(
-                    BytesIO(st.session_state.uploaded_file_state))
+                image = Image.open(BytesIO(st.session_state.uploaded_file_state))
                 st.image(image, caption="Uploaded image")
 
     with col2:
@@ -74,17 +73,15 @@ def main():
 
         if uploaded_file is not None:
             for message in st.session_state.chats:
-                avatar = '🌋' if message["role"] == "assistant" else '🫠'
+                avatar = "🌋" if message["role"] == "assistant" else "🫠"
                 with container2.chat_message(message["role"], avatar=avatar):
                     st.markdown(message["content"])
 
             if user_input := st.chat_input(
                 "Question about the image...", key="chat_input"
             ):
-                st.session_state.chats.append(
-                    {"role": "user", "content": user_input})
-                container2.chat_message(
-                    "user", avatar='🫠').markdown(user_input)
+                st.session_state.chats.append({"role": "user", "content": user_input})
+                container2.chat_message("user", avatar="🫠").markdown(user_input)
 
                 image_base64 = img_to_base64(image)
                 API_URL = "http://localhost:11434/api/generate"
@@ -98,13 +95,11 @@ def main():
                     "images": [image_base64],
                 }
 
-                with container2.chat_message("assistant", avatar='🌋'):
+                with container2.chat_message("assistant", avatar="🌋"):
                     with st.spinner("wait for it..."):
-                        response = requests.post(
-                            API_URL, json=data, headers=headers)
+                        response = requests.post(API_URL, json=data, headers=headers)
                     if response.status_code == 200:
-                        response_generator = generate_llava_responses(
-                            response.text)
+                        response_generator = generate_llava_responses(response.text)
                         llava_responses = " ".join(
                             response for response in response_generator
                         )
