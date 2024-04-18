@@ -1,12 +1,12 @@
 # 🚀 Ollama x Streamlit Playground
 
-This project demonstrates how to run models locally using [Ollama](https://ollama.com/) and create an interactive UI with [Streamlit](https://streamlit.io).
+This project demonstrates how to run and manage models locally using [Ollama](https://ollama.com/) by creating an interactive UI with [Streamlit](https://streamlit.io).
 
-The app has a page for running chat-based models and also one for Llava model for vision.
+The app has a page for running chat-based models and also one for nultimodal models (_llava and bakllava_) for vision.
 
 ## App in Action
 
-![GIF](assets/ollama_gh.gif)
+![GIF](assets/ollama_streamlit.gif)
 
 ## Features
 
@@ -40,7 +40,7 @@ streamlit run 01_💬_Chat_Demo.py
 
 Navigate to the URL provided by Streamlit in your browser to interact with the app.
 
-**NB: Make sure you have downloaded [Ollama](https://ollama.com/) to your system and also have pulled a [model or models](https://ollama.com/library) you intend to use.**
+**NB: Make sure you have downloaded [Ollama](https://ollama.com/) to your system.**
 
 ## Contributing
 
@@ -55,4 +55,4 @@ Got questions or suggestions?
 
 ## Acknowledgments
 
-Kudos to the [Ollama](https://ollama.com/) team for their efforts in making machine learning models more accessible!
+👏 Kudos to the [Ollama](https://ollama.com/) team for their efforts in making open-source models more accessible!
