@@ -8,6 +8,12 @@ The app has a page for running chat-based models and also one for nultimodal mod
 
 ![GIF](assets/ollama_streamlit.gif)
 
+**Check out the video tutorial 👇**
+
+<a href="https://youtu.be/bAI_jWsLhFM">
+  <img src="https://img.youtube.com/vi/bAI_jWsLhFM/hqdefault.jpg" alt="Watch the video" width="100%">
+</a>
+
 ## Features
 
 - **Interactive UI**: Utilize Streamlit to create a user-friendly interface.
