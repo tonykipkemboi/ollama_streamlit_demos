@@ -69,7 +69,7 @@ SYSTEM You are mario from super mario bros.""",
 
     st.subheader("Delete Models", anchor=False)
     models_info = ollama.list()
-    available_models = [m["name"] for m in models_info["models"]]
+    available_models = [m["model"] for m in models_info["models"]]
 
     if available_models:
         selected_models = st.multiselect("Select models to delete", available_models)
